@@ -1,0 +1,30 @@
+digraph g {
+	rankdir=LR
+	subgraph c0 {
+		li1 [ shape=record label="<o> LinkedIntervalItem|<n> - next\l|<d> - data\l" ]
+		lid1 [ shape=record label="<o> SimpleInterval|- from = 1\l|- to = 3\l" ]
+	}
+
+	subgraph c1 {
+		li2 [ shape=record label="<o> LinkedIntervalItem|<n> - next\l|<d> - data\l" ]
+		lid2 [ shape=record label="<o> SimpleInterval|- from = 5\l|- to = 7\l" ]
+	}
+
+	subgraph c2 {
+		li3 [ shape=record label="<o> LinkedIntervalItem|<n> - next\l|<d> - data\l" ]
+		lid3 [ shape=record label="<o> SimpleInterval|- from = 18\l|- to = 20\l" ]
+	}
+
+	li1:n -> li2:o
+	li1:d -> lid1:o
+	li2:n -> li3:o
+	li2:d -> lid2:o
+	null [ shape=none ]
+	li3:n -> null
+	li3:d -> lid3:o
+
+	li [ shape=record label="<o> LinkedInterval|<f> - first\l|<l> - last\l" ]
+	li:f -> li1:o
+	li:l -> li3:o
+
+}

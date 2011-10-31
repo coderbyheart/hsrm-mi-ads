@@ -1,0 +1,54 @@
+# 2-3-4 Baum
+
+# M
+M
+
+#+ A
+AM
+
+#+ R
+AMR
+
+#+ K
+   M
+ /   \
+AK    R
+
+#+ U
+   M
+ /   \
+AK   RU
+
+#+ S
+   M
+ /   \
+AK   RSU
+
+#+ T
+   MS
+ /  \ \
+AK   R TU
+
+#+ A
+#+ C
+    MS
+  /  \ \
+ACK   R TU
+
+#+ E
+#+ R
+    CMS
+  / /  \ \
+AE K   R TU
+
+
+
+# Rot-Schwarz-Baum
+
+       M
+     /   \       
+    C     S
+   / \   / \     
+  E   K R   T
+ /           \   
+A             U 
